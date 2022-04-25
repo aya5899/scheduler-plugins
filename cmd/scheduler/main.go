@@ -34,7 +34,7 @@ import (
 	"sigs.k8s.io/scheduler-plugins/pkg/trimaran/loadvariationriskbalancing"
 	"sigs.k8s.io/scheduler-plugins/pkg/trimaran/targetloadpacking"
 
-	"github.com/aya5899/scheduler-plugins/pkg/sample"
+	"sigs.k8s.io/scheduler-plugins/pkg/sample"
 
 	// Ensure scheme package is initialized.
 	_ "sigs.k8s.io/scheduler-plugins/apis/config/scheme"
@@ -59,7 +59,7 @@ func main() {
 		app.WithPlugin(podstate.Name, podstate.New),
 		app.WithPlugin(qos.Name, qos.New),
 
-		app.WithPlugin(sample.Name, sample,New)
+		app.WithPlugin(sample.Name, sample.New),
 	)
 
 	// TODO: once we switch everything over to Cobra commands, we can go back to calling

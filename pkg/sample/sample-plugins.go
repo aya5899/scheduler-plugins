@@ -17,7 +17,7 @@ const (
 	Name = "SamplePlugin"
 )
 
-func New(_ runtime.Object. handle framework.Handle) (framework.Plugin, error) {
+func New(_ runtime.Object, handle framework.Handle) (framework.Plugin, error) {
 	return &SamplePlugin{}, nil
 }
 
